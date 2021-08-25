@@ -7,20 +7,28 @@ from matplotlib import pyplot as plt
 from PIL import Image
 
 path = r'vessel_data/images/3D P0@CTL-3-FC-A_new.tiff'
-image = Image.open(path)
 
-im = cv2.imread(path,0)
-print(im.dtype)
+image = np.asarray(Image.open(path))
+#image = Image.open(path)
+print(image)
+#Convertendo de volta em imagem
+#img = Image.fromarray(np.uint8(image))
 
-image.show()
+#img.show()
+#print(img)
+
+#img = cv2.imread(path,0)
+#print(im.dtype)
+
+#image.show()
 # path
-path = r'vessel_data/images/3D P0@CTL-3-FC-A_new.tiff'
+#path = r'vessel_data/images/3D P0@CTL-3-FC-A_new.tiff'
 
 # Using cv2.imread() method
-img = cv2.imread(path,-1)
+#img = cv2.imread(path,0)
 
 # Displaying the image
-cv2.imshow('image', img)
+#cv2.imshow('image', img)
 
 
 
