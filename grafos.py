@@ -17,14 +17,21 @@ if __name__ == '__main__':
     grafo2 = np.load(caminho_grafo2, allow_pickle=True, encoding='latin1').item()
 
     print('Exibindo o grafo 1:')
-    print(grafo1)
+    #print(grafo1)
     
     #plotando o grafo
     plot(grafo1)
 
     print('Exibindo o grafo 2:')
-    print(grafo2)
+    #print(grafo2)
+    #linha e profundidade onde estava o nó
+    #linha e coluna do vértice
+    pos = grafo1.vs["pos_no"]
 
+    #pegar os vizinhos
+    #viz = grafo1.
+
+    print(pos[0])
     # plotando o grafo
     plot(grafo2)
 
