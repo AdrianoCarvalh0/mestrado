@@ -5,7 +5,6 @@ import itertools
 import scipy.ndimage as ndi
 import numpy as np
 import networkx as nx
-import matplotlib.pyplot as plt
 
 try:
     import igraph
@@ -473,9 +472,9 @@ def match_graphs_igraph(ips, ig):
 if __name__=='__main__':
 
     # Run some tests
-    #modifiquei esta parte
-    ig_graph = igraph.Graph(n=4, edges=[(0, 0), (0, 1), (0, 1), (0, 2), (1, 2), (0, 3)], graph_attrs={'file': 'graph.gml'},
-                            vertex_attrs={'color':['red', 'green', 'blue', 'yellow']}, edge_attrs={'length':[0, 2, 2.5, 5, 7, 10]})
+
+    ig_graph = Graph(n=4, edges=[(0,0),(0,1),(0,1),(0,2),(1,2),(0,3)], graph_attrs={'file':'graph.gml'},
+                     vertex_attrs={'color':['red', 'green', 'blue', 'yellow']}, edge_attrs={'length':[0, 2, 2.5, 5, 7, 10]})
 
     graph = igraph_to_nx(ig_graph)
     ig_graph2 = nx_to_igraph(graph)
@@ -486,4 +485,3 @@ if __name__=='__main__':
 
     graph = nx_to_igraph(nx_graph)
     nx_graph2 = igraph_to_nx(graph)
-

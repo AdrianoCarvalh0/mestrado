@@ -5,8 +5,7 @@ import oiffile as oif
 import tifffile
 import numpy as np
 import czifile
-from .image import Image, data
-
+from .image import Image
 
 def read_img(path, channel=None, read_pix_size=True):
     """Read image from the disk. Supported formats are {'tif', 'tiff', 'oib', 'lsm', 'czi'}. The function
